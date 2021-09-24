@@ -1,11 +1,12 @@
 @mixin circleBtn($size: 2rem, $border-color: none, $bg-color: transparent) {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: $size;
   height: $size;
+  border: 1px solid;
   border-radius: $size;
   background-color: $bg-color;
-  border: 1px solid;
   border-color: $border-color;
 }
