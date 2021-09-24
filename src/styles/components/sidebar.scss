@@ -1,0 +1,10 @@
+.sidebar {
+  display: flex;
+  position: fixed;
+  width: $sidebar-width;
+  background: yellow;
+  top: $header-height;
+  left: 0;
+  bottom: 0;
+  min-height: 100%;
+}

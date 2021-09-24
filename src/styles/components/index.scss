@@ -1,0 +1,17 @@
+@import "@/styles/components/header";
+@import "@/styles/components/nav-tagbar";
+@import "@/styles/components/sidebar";
+@import "@/styles/components/main-container";
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  &__inner {
+    margin: {
+      top: calc(#{$header-height} + #{$nav-tagbar-height});
+      left: $sidebar-width;
+    }
+    width: 100%;
+  }
+}

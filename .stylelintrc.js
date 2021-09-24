@@ -3,8 +3,30 @@ module.exports = {
     "stylelint-config-recommended-scss",
     "stylelint-prettier/recommended"
   ],
-  plugins: ["stylelint-scss", 'stylelint-prettier'],
+  plugins: [
+    "stylelint-scss", 
+    "stylelint-order", 
+    'stylelint-prettier'
+  ],
   rules: {
+    "order/order": [
+      "custom-properties",
+			"declarations"
+    ],
+    "order/properties-order": [
+      "display",
+      "overflow",
+      "position",
+			"width",
+			"height",
+      "margin",
+      "padding",
+      "border",
+      "background",
+      "font",
+      "box-sizing",
+      "animation",
+		],
     "prettier/prettier": [true, { "singleQuote": false, "endOfLine": "auto" }],
     "function-calc-no-invalid": true,
     "value-no-vendor-prefix": true,

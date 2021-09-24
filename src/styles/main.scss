@@ -1,7 +1,21 @@
-@import "@/styles/variables";
-@import "@/styles/colors";
-@import "@/styles/mediaQuery";
+@import "@/styles/common/variables";
+@import "@/styles/common/colors";
+@import "@/styles/common/mediaQuery";
+@import "@/styles/components";
 
 html {
   font-size: 16px;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+#app {
+  height: 100%;
 }

@@ -1,0 +1,12 @@
+.tag-navbar {
+  display: flex;
+  position: fixed;
+  top: $header-height;
+  left: $sidebar-width;
+  width: 100%;
+  height: $nav-tagbar-height;
+  background: royalblue;
+  &__tag-list {
+    display: flex;
+  }
+}
