@@ -10,7 +10,7 @@
   width: 100%;
   min-height: 100%;
   &__inner {
+    margin: calc(#{$header-height} + #{$nav-tagbar-height}) 0 0 0;
     width: 100%;
-    margin: calc(#{$header-height} + #{$nav-tagbar-height}) 0 0 $sidebar-width;
   }
 }

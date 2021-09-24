@@ -1,12 +1,41 @@
 .tag-navbar {
   display: flex;
   position: fixed;
+  align-items: center;
   top: $header-height;
-  left: $sidebar-width;
   width: 100%;
   height: $nav-tagbar-height;
-  background: royalblue;
+  border-bottom: 1px solid $gray100;
+  background: $white;
+  .tag-navbar__move-left-btn,
+  .tag-navbar__move-right-btn {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    @include circleBtn($border-color: transparent);
+    &:not(.tag-navbar__move-left-btn) {
+      display: none;
+      right: 0;
+    }
+  }
   &__tag-list {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .tag-list__tag {
+      flex-shrink: 0;
+      margin: 0.5rem;
+      padding: 0.3125rem 0.75rem;
+      border: 1px solid $gray200;
+      border-radius: 1rem;
+      background-color: $gray100;
+      font-size: 0.75rem;
+      &.active {
+        background-color: $black500;
+        color: $white;
+        font-weight: 700;
+      }
+    }
   }
 }
