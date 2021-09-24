@@ -1,34 +1,52 @@
 // default: desktop
-$mobile-width: 456px;
-$mobile-and-tablet-width: 640px;
-$tablet-width: 791px;
-$tablet-and-desktop-width: 1313px;
+$breakpoint-mobile: 456px;
+$breakpoint-mobile-and-tablet: 640px;
+$breakpoint-tablet-width: 791px;
+$breakpoint-tablet-and-desktop: 1313px;
 
-$media-flex-wrap-2: 490px;
-$media-flex-wrap-3: 872px;
-$media-flex-wrap-4: 1128px;
+$breakpoint-videos-col-2: 490px;
+$breakpoint-videos-col-3: 872px;
+$breakpoint-videos-col-4: 1128px;
 
 @mixin customMedia($device) {
   @if $device == $mobile {
-    @media screen and (max-width: $mobile-width) {
+    @media screen and (max-width: $breakpoint-mobile-width) {
       @content;
     }
   }
 
   @if $device == $mobile-and-tablet {
-    @media screen and (max-width: $mobile-and-tablet-width) {
+    @media screen and (max-width: $breakpoint-mobile-and-tablet) {
       @content;
     }
   }
 
   @if $device == $tablet {
-    @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $breakpoint-tablet) {
       @content;
     }
   }
 
   @if $device == $tablet-and-desktop {
-    @media screen and (max-width: $tablet-and-desktop-width) {
+    @media screen and (max-width: $breakpoint-tablet-and-desktop) {
+      @content;
+    }
+  }
+
+  @if $device == $videos-col-2 {
+    @media screen and (max-width: $breakpoint-videos-col-2) {
+      @content;
+    }
+  }
+
+  @if $device == $videos-col-3 {
+    @media screen and (max-width: $breakpoint-videos-col-3) {
+      @content;
+    }
+  }
+
+  @if $device == $videos-col-4 {
+    @media screen and (max-width: $breakpoint-videos-col-4) {
       @content;
     }
   }

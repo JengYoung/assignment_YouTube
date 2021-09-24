@@ -5,12 +5,73 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp" rel="stylesheet">
 </head>
 <body>
   <div id="app">
-    <div class="header"></div>
+    <div class="header">
+      <div class="material-icons-outlined size-150">
+        menu
+      </div>
+      <a href="#" class="header__logo">
+        <img src="favicon.png" alt="">
+        <div class="logo__name">YouTube</div>
+      </a>
+      <section class="header__search-box">
+        <form action="" class="search-box__form">
+          <input type="text" class="form__input">
+          <button class="form__search-btn">
+            <div class="material-icons size-150">
+              search
+            </div>
+          </button>
+        </form>
+        <button class="search-box__search-voice-btn">
+          <div class="material-icons">
+            mic
+          </div>
+        </button>
+      </section>
+      <ul class="header__options">
+        <li class="option-btns__option">
+          <button class="material-icons create-vedio-btn">
+            video_call
+          </button>            
+        </li>
+        <li class="option-btns__option">
+          <button class="material-icons app-btn">
+            apps
+          </button>
+        </li>
+        <li class="option-btns__option">
+          <button class="material-icons alert-btn">
+            notifications_none
+          </button>
+        </li>
+        <li class="option-btns__option">
+          <button class="user-info-btn user-info-btn">
+            <div>재영</div>
+          </button>
+        </li>
+      </ul>
+    </div>
     <div class="container">
-      <aside class="sidebar"></aside>
+      <aside class="sidebar">
+        <nav class="sidebar__links">
+          <a href="#" class="links__home-link">
+            <span>홈</span>
+          </a>
+          <a href="#" class="links__home-link">
+            <span>탐색</span>
+          </a>
+          <a href="#" class="links__home-link">
+            <span>구독</span>
+          </a>
+          <a href="#" class="links__home-link">
+            <span>보관함</span>
+          </a>
+        </nav>
+      </aside>
       <nav class="tag-navbar">
         <button class="tag-navbar__move-left-btn"></button>
         <button class="tag-navbar__move-right-btn"></button>
