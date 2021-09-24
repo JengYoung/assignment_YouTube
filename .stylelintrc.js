@@ -1,11 +1,11 @@
 module.exports = {
   extends: [
-    "stylelint-config-recommended",
+    "stylelint-config-recommended-scss",
     "stylelint-prettier/recommended"
   ],
   plugins: ["stylelint-scss", 'stylelint-prettier'],
   rules: {
-    "prettier/prettier": [true, { "endOfLine": "auto" }],
+    "prettier/prettier": [true, { "singleQuote": false, "endOfLine": "auto" }],
     "function-calc-no-invalid": true,
     "value-no-vendor-prefix": true,
     "at-rule-semicolon-newline-after": "always",

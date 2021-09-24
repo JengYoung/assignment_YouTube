@@ -1,4 +1,7 @@
-div {
-  color: '#000000';
-  display: flex;
+@import "@/styles/variables";
+@import "@/styles/colors";
+@import "@/styles/mediaQuery";
+
+html {
+  font-size: 16px;
 }

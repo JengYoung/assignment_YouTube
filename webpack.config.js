@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: [path.join(__dirname, '/src/index.js'), path.join(__dirname, './src/styles/main.scss')],
   output: {
@@ -47,10 +48,13 @@ module.exports = {
     new HtmlWebpackPlugin({ 
       template: path.join(__dirname, '/index.html'),
       favicon: path.join(__dirname, '/src/assets/favicon.png'),
+      hash: true,
     }),
   ],
   devServer: {
     hot: true,
+    liveReload: true,
+    watchFiles: ['./index.html'],
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
 }
