@@ -1,0 +1,58 @@
+.main {
+  margin-top: $nav-tagbar-height;
+  width: 100%;
+  min-height: 100%;
+  background-color: $gray100;
+  &__videos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 1.25rem;
+    .videos__video {
+      width: calc(50% - 0.5rem);
+      margin-bottom: 2rem;
+      max-width: $img-max-width;
+      .video__thumbnail {
+        width: 100%;
+      }
+      .video__details {
+        padding-top: 0.5rem;
+        display: flex;
+        .details__author-info {
+          @include circleBtn($border-color: transparent);
+          margin-right: 0.5rem;
+          flex-shrink: 0;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        .details__detail {
+          .detail__title {
+            margin-bottom: 0.25rem;
+            line-height: 1.375;
+          }
+          .detail__author {
+            color: $black300;
+            font-size: 0.8125rem;
+          }
+          .detail__video-infos {
+            display: flex;
+            .video-infos__view,
+            .video-infos__create-at {
+              color: $black300;
+              font-size: 0.8125rem;
+            }
+            .video-infos__create-at {
+              &::before {
+                content: "·";
+                margin: 0 0.1875rem;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@
   height: $nav-tagbar-height;
   border-bottom: 1px solid $gray100;
   background: $white;
+  box-sizing: border-box;
   .tag-navbar__move-left-btn,
   .tag-navbar__move-right-btn {
     display: flex;

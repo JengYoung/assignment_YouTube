@@ -1,7 +1,7 @@
 @import "@/styles/components/header";
 @import "@/styles/components/nav-tagbar";
 @import "@/styles/components/sidebar";
-@import "@/styles/components/main-container";
+@import "@/styles/components/main";
 @import "@/styles/components/icons.scss";
 
 // block not feature
@@ -10,7 +10,8 @@
   width: 100%;
   min-height: 100%;
   &__inner {
-    margin: calc(#{$header-height} + #{$nav-tagbar-height}) 0 0 0;
+    margin: $header-height 0 0 0;
     width: 100%;
   }
+  box-sizing: border-box;
 }
