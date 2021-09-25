@@ -1,4 +1,8 @@
-@mixin circleBtn($size: 2rem, $border-color: none, $bg-color: transparent) {
+@mixin circleBtn(
+  $size: 2rem,
+  $border-color: transparent,
+  $bg-color: transparent
+) {
   display: flex;
   position: relative;
   justify-content: center;
@@ -9,4 +13,27 @@
   border-radius: $size;
   background-color: $bg-color;
   border-color: $border-color;
+}
+@mixin tagNavBarBtn($isLeft) {
+  $deg: if($isLeft, 90deg, 270deg);
+  @include circleBtn($border-color: transparent);
+  display: flex;
+  position: absolute;
+
+  align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 5rem;
+    height: 2rem;
+    background: linear-gradient($deg, $white 60%, rgba(255, 255, 255, 0));
+  }
+  &:not(.tag-navbar__move-left-btn) {
+    // display: none;
+    right: 0;
+  }
+  .material-icons {
+    z-index: 2;
+  }
 }

@@ -9,6 +9,11 @@
     img {
       width: 2.25rem;
     }
+    mark {
+      display: block;
+      background-color: rgb(255, 214, 34);
+      line-height: 2.5;
+    }
   }
   &__videos {
     display: flex;
@@ -23,7 +28,7 @@
         width: 100%;
         &:hover {
           cursor: pointer;
-          content: url("https://i.ytimg.com/an_webp/mp10rJ4bMZY/mqdefault_6s.webp?du=3000&sqp=CKqIt4oG&rs=AOn4CLDofqlrLK7KHyhztKrh2MrEXqiC2g");
+          content: url("https://i.ytimg.com/an_webp/mp10rJ4bMZY/mqdefault_6s.webp?du=3000&sqp=CK7QuYoG&rs=AOn4CLDvbF4KaaqQRGzD2-22TUkHux0K-g");
         }
       }
       .video__details {
