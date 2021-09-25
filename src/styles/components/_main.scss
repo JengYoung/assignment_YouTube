@@ -6,11 +6,11 @@
   min-height: 100%;
   background-color: $gray100;
   box-sizing: border-box;
-  @include mediaQuery($breakpoint-tablet-width) {
-    margin-left: $sidebar-width;
-  }
-  @include mediaQuery($breakpoint-videos-col-3) {
+  @include mediaQuery($breakpoint-mobile-videos-padding) {
     padding: 0 1rem;
+  }
+  @include mediaQuery($breakpoint-tablet) {
+    margin-left: $sidebar-width;
   }
   &__loading {
     display: flex;
@@ -26,12 +26,11 @@
   }
   &__videos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     padding-top: 1.25rem;
     .videos__video {
-      width: calc(50% - 0.5rem);
       max-width: $img-max-width;
       margin-bottom: 2rem;
       .video__thumbnail {
@@ -85,6 +84,13 @@
         }
       }
     }
+    @include mediaQuery($breakpoint-videos-col-2) {
+      justify-content: flex-start;
+      .videos__video {
+        padding-right: 1rem;
+        width: calc(50% - 1rem);
+      }
+    }
     @include mediaQuery($breakpoint-mobile-videos-padding) {
       justify-content: center;
       .videos__video {
@@ -93,7 +99,6 @@
     }
     @include mediaQuery($breakpoint-videos-col-3) {
       justify-content: center;
-      max-width: auto;
       .videos__video {
         width: calc(33.3% - 1rem);
       }
