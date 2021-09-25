@@ -1,8 +1,17 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: $nav-tagbar-height;
-  width: 100%;
   min-height: 100%;
   background-color: $gray100;
+  box-sizing: border-box;
+  @include mediaQuery($breakpoint-tablet-width) {
+    margin-left: $sidebar-width;
+  }
+  @include mediaQuery($breakpoint-videos-col-3) {
+    padding: 0 1rem;
+  }
   &__loading {
     display: flex;
     justify-content: center;
@@ -17,18 +26,14 @@
   }
   &__videos {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
     padding-top: 1.25rem;
-    @include mediaQuery($breakpoint-mobile-videos-padding) {
-      padding: 1.25rem 1.25rem 0 1.25rem;
-    }
     .videos__video {
       width: calc(50% - 0.5rem);
       max-width: $img-max-width;
-      @include mediaQuery($breakpoint-videos-col-3) {
-        width: calc(33% - 3rem);
-      }
+      margin-bottom: 2rem;
       .video__thumbnail {
         width: 100%;
         &:hover {
@@ -78,6 +83,24 @@
             }
           }
         }
+      }
+    }
+    @include mediaQuery($breakpoint-mobile-videos-padding) {
+      justify-content: center;
+      .videos__video {
+        padding: 0 0.5rem;
+      }
+    }
+    @include mediaQuery($breakpoint-videos-col-3) {
+      justify-content: center;
+      max-width: auto;
+      .videos__video {
+        width: calc(33.3% - 1rem);
+      }
+    }
+    @include mediaQuery($breakpoint-videos-col-4) {
+      .videos__video {
+        width: calc(25% - 1rem);
       }
     }
   }

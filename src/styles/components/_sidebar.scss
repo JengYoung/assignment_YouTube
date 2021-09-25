@@ -1,6 +1,7 @@
 .sidebar {
   display: none;
   position: fixed;
+  flex-shrink: 0;
   z-index: 39;
   top: $header-height;
   left: 0;
