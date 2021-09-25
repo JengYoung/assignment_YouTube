@@ -1,12 +1,16 @@
 .sidebar {
   display: none;
   position: fixed;
+  z-index: 39;
   top: $header-height;
   left: 0;
   bottom: 0;
   width: $sidebar-width;
   background: $white;
   min-height: 100%;
+  @include mediaQuery($breakpoint-tablet-width) {
+    display: flex;
+  }
   &__links {
     .links__home-link {
       display: block;

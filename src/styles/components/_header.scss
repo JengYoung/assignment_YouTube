@@ -27,20 +27,26 @@
       letter-spacing: -0.125rem;
     }
     sup {
+      align-self: flex-start;
       display: inline-block;
-      position: absolute;
-      top: 0;
-      right: -1rem;
       height: 100%;
       font-size: 0.625rem;
     }
   }
   &__search-box {
     display: flex;
+    align-items: center;
     margin-left: auto;
     .search-box__form {
-      .form__input {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .form__input-box {
         display: none;
+        .form__input {
+          width: 100%;
+          height: 2rem;
+        }
       }
       .form__search-btn {
         @include circleBtn();
@@ -53,15 +59,70 @@
       border: none;
       color: $black300;
     }
+    @include mediaQuery($breakpoint-mobile-and-tablet) {
+      justify-content: center;
+      width: 100%;
+      max-width: 45rem;
+      height: 2.25rem;
+      margin-right: 1.5rem;
+      .search-box__form {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        .form__input-box {
+          display: flex;
+          align-items: center;
+          padding: 0 0.25rem;
+          width: 100%;
+          border: 1px solid $gray200;
+          background-color: white;
+          box-sizing: border-box;
+          margin-left: 2.5rem;
+          .form__input {
+            width: 100%;
+            height: 2.125rem;
+            border: none;
+            box-sizing: border-box;
+          }
+          .form__keyboard {
+            margin: 0;
+            padding: 0;
+            padding: 0 0.25rem;
+            border: none;
+            background-color: $white;
+            color: $black300;
+            font-size: 1rem;
+          }
+        }
+        .form__search-btn {
+          width: 4rem;
+          height: 100%;
+          border: 1px solid $gray200;
+          border-radius: 0;
+          background-color: $gray100;
+          color: $black300;
+          box-sizing: border-box;
+        }
+      }
+      .search-box__search-voice-btn {
+        @include circleBtn();
+        width: 2.25rem;
+        height: 2.25rem;
+        border: none;
+        color: $black300;
+      }
+    }
   }
   &__options {
     display: flex;
     position: relative;
-    margin: 0;
+    right: 1rem;
+    margin-left: 1rem;
     padding: 0;
     list-style: none;
     .option-btns__option {
-      padding: 0 0.25rem;
+      padding-left: 0.75rem;
       .create-vedio-btn,
       .app-btn,
       .alert-btn {
@@ -70,12 +131,16 @@
       }
       .user-info-btn {
         @include circleBtn(2rem, $bg-color: $green500);
+        margin-left: 0.75rem;
         background-color: $green500;
         color: white;
         font-size: 0.6875rem;
         font-weight: 400;
         word-break: keep-all;
       }
+    }
+    @include mediaQuery($breakpoint-mobile-and-tablet) {
+      margin-left: auto;
     }
   }
 }

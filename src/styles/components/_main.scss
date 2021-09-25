@@ -17,13 +17,18 @@
   }
   &__videos {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 1.25rem;
+    @include mediaQuery($breakpoint-mobile-videos-padding) {
+      padding: 1.25rem 1.25rem 0 1.25rem;
+    }
     .videos__video {
       width: calc(50% - 0.5rem);
-      margin-bottom: 2rem;
       max-width: $img-max-width;
+      @include mediaQuery($breakpoint-videos-col-3) {
+        width: calc(33% - 3rem);
+      }
       .video__thumbnail {
         width: 100%;
         &:hover {
@@ -32,8 +37,8 @@
         }
       }
       .video__details {
-        padding-top: 0.5rem;
         display: flex;
+        padding-top: 0.5rem;
         .details__author-info {
           flex-shrink: 0;
           overflow: hidden;
@@ -66,9 +71,9 @@
             }
             .video-infos__create-at {
               &::before {
-                content: "·";
                 margin: 0 0.1875rem;
                 font-weight: 700;
+                content: "·";
               }
             }
           }
