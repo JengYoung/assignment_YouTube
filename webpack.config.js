@@ -27,11 +27,11 @@ module.exports = {
 
       },
       {
-        test: /\.(png|svg|jpg|gif|ico)$/,
+        test: /\.(png|svg|jpg|gif|ico)$/, // img
         loader: 'file-loader',
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/, // font
         loader: 'file-loader',
       },
       {

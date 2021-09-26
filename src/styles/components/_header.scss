@@ -2,12 +2,17 @@
   display: flex;
   position: fixed;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   width: 100%;
   height: $header-height;
   border-bottom: 1px solid $gray200;
   background: $white;
   box-sizing: border-box;
+  &__menu {
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &__logo {
     display: flex;
     position: relative;
@@ -126,7 +131,6 @@
   &__options {
     display: flex;
     position: relative;
-    right: 1rem;
     margin-left: 1rem;
     padding: 0;
     list-style: none;

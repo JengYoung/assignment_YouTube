@@ -33,15 +33,19 @@
     .videos__video {
       max-width: $img-max-width;
       margin-bottom: 2rem;
+      &:hover {
+        cursor: pointer;
+      }
       .video__thumbnail {
         width: 100%;
         &:hover {
           cursor: pointer;
-          content: url("https://i.ytimg.com/an_webp/mp10rJ4bMZY/mqdefault_6s.webp?du=3000&sqp=CK7QuYoG&rs=AOn4CLDvbF4KaaqQRGzD2-22TUkHux0K-g");
+          content: url("https://i.ytimg.com/an_webp/mp10rJ4bMZY/mqdefault_6s.webp?du=3000&sqp=COLNv4oG&rs=AOn4CLCoz52q5vM6sIE7P0orwXJ45YXyDg");
         }
       }
       .video__details {
         display: flex;
+        position: relative;
         padding-top: 0.5rem;
         .details__author-info {
           flex-shrink: 0;
@@ -50,28 +54,34 @@
           height: 2rem;
           border-radius: 2rem;
           margin-right: 0.5rem;
-          &:hover {
-            cursor: pointer;
-          }
           img {
             width: 100%;
           }
         }
         .details__detail {
           .detail__title {
-            margin-bottom: 0.25rem;
+            overflow: hidden;
+            // width: 10rem;
+            height: 20rem;
+            font-size: 0.875rem;
+            text-overflow: ellipsis;
+            white-space: normal;
+            line-clamp: 2;
+            max-height: 2rem;
+            padding-bottom: 0.25rem;
             line-height: 1.375;
           }
           .detail__author {
             color: $black300;
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
           }
           .detail__video-infos {
             display: flex;
             .video-infos__view,
+            .view__cnt,
             .video-infos__create-at {
               color: $black300;
-              font-size: 0.8125rem;
+              font-size: 0.875rem;
             }
             .video-infos__create-at {
               &::before {
@@ -82,19 +92,26 @@
             }
           }
         }
+        .details__more {
+          position: relative;
+          flex-shrink: 0;
+          flex-grow: 40;
+          right: 0;
+          width: 1rem;
+        }
       }
     }
     @include mediaQuery($breakpoint-videos-col-2) {
       justify-content: flex-start;
       .videos__video {
-        padding-right: 1rem;
+        margin-right: 1rem;
         width: calc(50% - 1rem);
       }
     }
     @include mediaQuery($breakpoint-mobile-videos-padding) {
       justify-content: center;
       .videos__video {
-        padding: 0 0.5rem;
+        margin: 0 0.5rem;
       }
     }
     @include mediaQuery($breakpoint-videos-col-3) {
