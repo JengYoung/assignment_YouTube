@@ -11,8 +11,8 @@
   height: $size;
   border: 1px solid;
   border-radius: $size;
-  background-color: $bg-color;
   border-color: $border-color;
+  background-color: $bg-color;
 }
 @mixin tagNavBarBtn($isLeft) {
   $deg: if($isLeft, 90deg, 270deg);

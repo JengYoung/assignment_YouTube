@@ -2,6 +2,7 @@
   display: flex;
   position: fixed;
   align-items: center;
+  z-index: 10;
   padding: 0 1.5rem;
   width: 100%;
   height: $header-height;
@@ -32,10 +33,10 @@
       letter-spacing: -0.125rem;
     }
     sup {
-      align-self: flex-start;
       display: inline-block;
       height: 100%;
       font-size: 0.625rem;
+      align-self: flex-start;
     }
   }
   &__search-box {
@@ -70,10 +71,10 @@
 
     @include mediaQuery($breakpoint-mobile-and-tablet) {
       justify-content: center;
+      margin-right: 1.5rem;
       width: 100%;
       max-width: 45rem;
       height: 2.25rem;
-      margin-right: 1.5rem;
       .search-box__form {
         display: flex;
         width: 100%;
@@ -82,12 +83,12 @@
         .form__input-box {
           display: flex;
           align-items: center;
+          margin-left: 2.5rem;
           padding: 0 0.25rem;
           width: 100%;
           border: 1px solid $gray200;
           background-color: white;
           box-sizing: border-box;
-          margin-left: 2.5rem;
           .form__input {
             width: 100%;
             height: 2.125rem;
@@ -107,6 +108,7 @@
 
         .form__search-btn {
           flex-shrink: 0;
+          margin-right: 0.25rem;
           width: 4rem;
           height: 100%;
           border: 1px solid $gray200;
@@ -114,17 +116,16 @@
           background-color: $gray100;
           color: $black300;
           box-sizing: border-box;
-          margin-right: 0.25rem;
         }
       }
 
       .search-box__search-voice-btn {
         @include circleBtn();
+        margin-left: 0.5rem;
         width: 2.25rem;
         height: 2.25rem;
         border: none;
         color: $black300;
-        margin-left: 0.5rem;
       }
     }
   }

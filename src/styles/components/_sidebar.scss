@@ -7,9 +7,9 @@
   left: 0;
   bottom: 0;
   width: $sidebar-width;
+  min-height: 100%;
   border-top: 1px solid $white;
   background: $white;
-  min-height: 100%;
   box-sizing: border-box;
   @include mediaQuery($breakpoint-tablet) {
     display: flex;
