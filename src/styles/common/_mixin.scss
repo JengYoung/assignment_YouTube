@@ -25,13 +25,12 @@
     content: "";
     position: absolute;
     z-index: 1;
-    width: 5rem;
-    height: 2rem;
-    background: linear-gradient($deg, $white 60%, rgba(255, 255, 255, 0));
+    width: 6rem;
+    height: 3rem;
+    background: linear-gradient(to left, $white 60%, rgba($white, 0.2));
   }
   &:not(.tag-navbar__move-left-btn) {
-    // display: none;
-    right: 0;
+    right: $sidebar-width;
   }
   .material-icons {
     z-index: 2;

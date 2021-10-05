@@ -40,7 +40,7 @@
         width: 100%;
         &:hover {
           cursor: pointer;
-          content: url("https://i.ytimg.com/an_webp/mp10rJ4bMZY/mqdefault_6s.webp?du=3000&sqp=COLNv4oG&rs=AOn4CLCoz52q5vM6sIE7P0orwXJ45YXyDg");
+          content: url(#{$content-hover-url});
         }
       }
       .video__details {

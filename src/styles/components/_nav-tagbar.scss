@@ -10,6 +10,7 @@
   border-bottom: 1px solid $gray200;
   background: $white;
   box-sizing: border-box;
+
   .tag-navbar__move-left-btn {
     @include tagNavBarBtn($isLeft: true);
     display: none;
