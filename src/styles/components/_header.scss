@@ -20,14 +20,14 @@
     align-items: center;
     margin-left: 1.5rem;
     text-decoration: none;
-    outline: none;
     color: $black100;
+    outline: none;
     img {
       width: auto;
       height: 1.75rem;
     }
     .logo__name {
-      color: $black500;
+      color: $black300;
       font-size: 1.375rem;
       font-weight: 700;
       font-family: "Roboto", sans-serif;
@@ -38,6 +38,7 @@
       height: 100%;
       font-size: 0.625rem;
       align-self: flex-start;
+      color: $black100;
     }
   }
   &__search-box {
@@ -61,13 +62,13 @@
       .form__search-btn {
         @include circleBtn();
         border: none;
-        color: $black300;
+        color: $black100;
       }
     }
     .search-box__search-voice-btn {
       @include circleBtn();
       border: none;
-      color: $black300;
+      color: $black100;
     }
 
     @include mediaQuery($breakpoint-mobile-and-tablet) {
@@ -102,7 +103,7 @@
             padding: 0 0.25rem;
             border: none;
             background-color: $white;
-            color: $black300;
+            color: $black100;
             font-size: 1rem;
           }
         }
@@ -115,7 +116,7 @@
           border: 1px solid $gray200;
           border-radius: 0;
           background-color: $gray100;
-          color: $black300;
+          color: $black100;
           box-sizing: border-box;
         }
       }
@@ -126,7 +127,7 @@
         width: 2.25rem;
         height: 2.25rem;
         border: none;
-        color: $black300;
+        color: $black100;
       }
     }
   }

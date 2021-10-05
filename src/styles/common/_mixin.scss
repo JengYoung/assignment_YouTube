@@ -30,7 +30,10 @@
     background: linear-gradient(to left, $white 60%, rgba($white, 0.2));
   }
   &:not(.tag-navbar__move-left-btn) {
-    right: $sidebar-width;
+    right: 0;
+    @include mediaQuery($breakpoint-tablet) {
+      right: $sidebar-width;
+    }
   }
   .material-icons {
     z-index: 2;
